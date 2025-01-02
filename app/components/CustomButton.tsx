@@ -19,7 +19,7 @@ const CustomButton = ({
 }: CustomButtonInterface) => {
   return (
     <TouchableOpacity
-      className={`bg-secondary rounded-xl min-h-[62px] 
+      className={` w-full bg-secondary rounded-xl min-h-[62px] 
         justify-center items-center ${containerStyle}
         (${isLoading} ? ' opacity-50' : ' opacity-100')`}
       activeOpacity={0.7}
