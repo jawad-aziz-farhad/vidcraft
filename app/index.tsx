@@ -4,17 +4,15 @@ import images from "../constants/images";
 import CustomButton from "./components/CustomButton";
 import { StatusBar } from "expo-status-bar";
 import { router } from "expo-router";
+import AppLogo from "./components/AppLogo";
+import { APP_NAME } from "../constants/configs";
 
 const App = () => {
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className="h-full w-full items-center justify-center px-4">
-          <Image
-            source={images.logo}
-            className="w-[130px] h-[84px]"
-            resizeMode="contain"
-          />
+          <AppLogo />
 
           <Image
             source={images.cards}
@@ -26,13 +24,13 @@ const App = () => {
             <View>
               <Text className="md:text-3xl text-2xl text-center text-white font-bold">
                 Discover Endless Opportunities with
-                <Text className="text-secondary-200"> VidCraft</Text>
+                <Text className="text-secondary-200"> {APP_NAME}</Text>
               </Text>
             </View>
 
             <Text className="font-pregular text-lg md:text-xl  mt-5 text-gray-100 text-center">
               Where creativity meets innovation embark on a journey of limitless
-              exploration of VidCraft.
+              exploration of {APP_NAME}.
             </Text>
           </View>
 
