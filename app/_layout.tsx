@@ -30,12 +30,17 @@ const RootLayout = () => {
 
   if (!fontsLoaded && !error) return null;
 
+  const stackScreen = [
+    { name: "index", options: { headerShown: false } },
+    { name: "(auth)", options: { headerShown: false } },
+    { name: "(tabs)", options: { headerShown: false } },
+  ];
+
   return (
     <Stack>
-      <Stack.Screen
-        name="index"
-        options={{ title: "Home", headerShown: false }}
-      ></Stack.Screen>
+      {stackScreen.map((screen) => (
+        <Stack.Screen key={screen.name} {...screen} />
+      ))}
     </Stack>
   );
 };
