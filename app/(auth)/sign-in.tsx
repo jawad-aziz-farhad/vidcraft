@@ -56,6 +56,7 @@ const SignIn = () => {
 
   const handleSignIn = async () => {
     try {
+      setIsLoading(true);
       await signIn(formFields[0].value, formFields[1].value);
 
       router.replace("/home");
