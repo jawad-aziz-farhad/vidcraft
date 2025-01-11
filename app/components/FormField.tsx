@@ -1,5 +1,5 @@
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import icons from "../../constants/icons";
 
 interface FormFieldInterface {
@@ -32,7 +32,7 @@ const FormField = ({
 
   return (
     <View className={`w-full ${containterStyles}`}>
-      <Text className="text-base text-gray-100 font-pmedium">{label}</Text>
+      <Text className="text-base text-gray-100 font-psemibold">{label}</Text>
 
       <View className="flex-row w-full h-16 px-4 bg-black-100 border-2 border-black-100 rounded-xl focus:border-secondary-200">
         <TextInput
